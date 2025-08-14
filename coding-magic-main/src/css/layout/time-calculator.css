@@ -1,0 +1,74 @@
+
+
+.time__calc__title {
+  color: var(--secondary-color);
+  font-family: 'Montserrat Alternates';
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.time__calc__form__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 33px;
+}
+
+
+.time__calc__form {
+  filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.25));
+  display: flex;
+  width: 150px;
+  height: 35px;
+}
+
+.time__calc__input {
+  padding-left: 10px;
+  border: none;
+  border-radius: 20px 0px 0px 20px;
+  background-color: #D7D7D7;
+
+  width: 100%;
+  height: 100%;
+}
+
+
+.time__calc__input::placeholder {
+  color: #7E7E7E;
+  font-family: "Montserrat Alternates";
+  font-size: 12px;
+  font-weight: 400;
+
+}
+
+
+.time__calc__btn {
+  padding: 10px;
+  border-radius: 0px 20px 20px 0px;
+  background-color: #000;
+}
+
+/* .time__calc__btn:hover,
+.time__calc__btn:focus{
+  background-color: #5b5b5b;
+} */
+
+/* .time__calc__btn__img {
+  width: 16px;
+  height: 16px;
+  fill: var(--primary-color);
+} */
+
+
+.time__calc__dots {
+  width: 100px;
+  border: 1px dashed var(--secondary-color);
+}
+
+.time__calc__output {
+  color: var(--secondary-color);
+  font-size: 12px;
+}

@@ -1,0 +1,28 @@
+main{
+    background-image: url(/img/background.png);
+    background-size: cover;
+    background-color: #EEEEEE;
+}
+
+
+.container{
+    margin: 0 auto;
+    width: 1090px;
+    background-color: var(--primary-color);
+}
+
+
+.line{
+    width: 536px;
+    height: 1px;
+    background-color: var(--secondary-color);
+    margin: 36px auto;
+}
+
+
+.hero__title{
+    text-align: center;
+    color: var(--secondary-color); 
+    font-size: 24px;
+    padding-top: 36px;
+}

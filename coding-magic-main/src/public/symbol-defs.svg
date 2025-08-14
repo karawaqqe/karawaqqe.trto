@@ -1,0 +1,16 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-Group-2" viewBox="0 0 34 32">
+<path fill="none" stroke="#000" style="stroke: var(--color1, #000)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6" d="M8.8 9.943l-8 8 8 8"></path>
+<path fill="none" stroke="#000" style="stroke: var(--color1, #000)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6" d="M24.8 9.943l8 8-8 8"></path>
+<path fill="#000" style="fill: var(--color1, #000)" d="M19.628 4.034l-6.869 25.637c-0.093 0.348-0.451 0.555-0.8 0.462s-0.555-0.451-0.462-0.8l6.869-25.637c0.093-0.348 0.451-0.555 0.8-0.462s0.555 0.451 0.462 0.8z"></path>
+<path fill="#d9d9d9" style="fill: var(--color2, #d9d9d9)" d="M18.366 3.696c0.093-0.348 0.451-0.555 0.8-0.462s0.555 0.451 0.462 0.8l-0.837 3.123-1.262-0.338 0.837-3.123z"></path>
+<path fill="none" stroke="#000" style="stroke: var(--color1, #000)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.8" d="M20.556 5.618l2.523 0.676"></path>
+<path fill="none" stroke="#000" style="stroke: var(--color1, #000)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.8" d="M14.248 3.928l2.523 0.676"></path>
+<path fill="none" stroke="#000" style="stroke: var(--color1, #000)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.8" d="M15.717 0.969l1.31 2.247"></path>
+<path fill="none" stroke="#000" style="stroke: var(--color1, #000)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.8" d="M14.069 7.117l2.258-1.291"></path>
+<path fill="none" stroke="#000" style="stroke: var(--color1, #000)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.8" d="M20.22 6.869l1.31 2.247"></path>
+<path fill="none" stroke="#000" style="stroke: var(--color1, #000)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.8" d="M20.92 4.26l2.258-1.291"></path>
+</symbol>
+</defs>
+</svg>
