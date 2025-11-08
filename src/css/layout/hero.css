@@ -1,0 +1,193 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.hero {
+   background-image: url(../../img/bgformain_Nero_AI_Image_Upscaler_Photo_Face.jpeg);
+  background-size: cover; /* или background-size: 100% auto; */
+  background-position: top;
+  background-repeat: repeat-y; /* повторяем вниз */
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.hero__content {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+}
+
+.hero__title {
+  margin-top: 230px;
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 68px;
+  color: #ffffff;
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.6),
+    0 0 10px rgba(142, 0, 0, 0.5),
+    0 0 20px rgb(118, 0, 0);
+  background: linear-gradient(90deg, #ffffff, #ffffff, #ffffff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 4s linear infinite;
+  transition: all 0.3s ease;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* чтобы на маленьких экранах переносились */
+  gap: 30px;
+  margin-top: -200px;
+}
+
+.card {
+  margin-top: 140px;
+  width: 280px;
+  height: 480px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.card-back {
+  background: rgba(0, 0, 0, 0.85);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'UnifrakturMaguntia', cursive;
+  text-align: center;
+  font-size: 20px;
+  color: #9c0000;
+  text-shadow: 0 0 10px #950000, 0 0 20px #130606, 0 0 30px #110303;
+  opacity: 0.85;
+  position: relative;
+}
+
+.card-back p {
+  margin: 0 0 20px 0;
+}
+
+.card-text {
+  width: 100%;
+  margin-top: 200px;
+  text-align: center;
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 5px 0;
+  color: #d8d8d8;
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.6),
+    0 0 10px rgba(142, 0, 0, 0.5),
+    0 0 20px rgb(118, 0, 0);
+  opacity: 0.85;
+  bottom: 0;
+  position: relative;
+}
+
+.hero__button {
+  margin-top: 50px;
+  padding: 10px 35px;
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 16px;
+  color: #ff0000;
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid #5f1111;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6), 0 0 30px rgba(0, 0, 0, 0.9);
+}
+
+.hero__button:hover {
+  color: #fff;
+  background: #840000;
+  box-shadow: 
+    0 0 20px rgba(255, 0, 0, 0.9),
+    0 0 40px rgba(255, 0, 0, 0.8),
+    0 0 60px rgba(0, 0, 0, 1);
+  transform: scale(1.05);
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.9), 0 0 50px rgba(0, 0, 0, 1);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.hero__button.glow {
+  animation: pulseGlow 2s infinite;
+}
+
+.div__img__hero {
+  z-index: 3;
+  background-image: url(../../img/hea_Nero_AI_Image_Upscaler_Photo_Face-Photoroom.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 80%;
+  max-width: 1000px;
+  height: 300px;
+
+  margin: 200px auto 0 auto;
+  display: block;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

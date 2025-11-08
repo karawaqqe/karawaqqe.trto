@@ -1,0 +1,181 @@
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes redBlackGlow {
+  0% {
+    text-shadow: 0 0 5px #434343, 0 0 10px #424242;
+    color: #363636;
+  }
+  50% {
+    text-shadow: 0 0 10px #000000, 0 0 20px #312f2f;
+    color: #000000;
+  }
+  100% {
+    text-shadow: 0 0 5px #360404, 0 0 10px #5f5555;
+    color: #ad5353;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  width: auto;
+  height: 170px;
+  background-image: url('../../img/seriu_Nero_AI_Image_Upscaler_Photo_Face.png');
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  backdrop-filter: blur(4px);
+  position: relative;
+  z-index: 2;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: -90px; /* чтобы градиент заходил сверху внутрь хедера */
+  left: 0;
+  width: 100%;
+  height: calc(170px + 200px); /* хедер + сколько вниз уходит в hero */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.85) 0%,   /* чуть прозрачный сверху, видно хедер */
+    rgba(0, 0, 0, 0.95) 20%,  /* плотнее затемнение в середине */
+    rgba(0, 0, 0, 0.7) 60%,   /* плавное ослабление */
+    rgba(0, 0, 0, 0) 100%     /* полностью прозрачный внизу */
+  );
+  pointer-events: none;
+  z-index: 3;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -901px;
+  width: 100%;
+  height: 900px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 7) 0%,
+    rgba(0, 0, 0, 0.95) 15%,
+    rgba(0, 0, 0, 0.8) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  pointer-events: none;
+  z-index: 3;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header__nav {
+  display: flex;
+  gap: 20px;
+}
+
+.title {
+  transform: translateY(10px);
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 90px;
+  padding-top: 115px;
+  color: #440000;
+  text-shadow: 0 0 10px #5f1111, 0 0 20px #130606, 0 0 30px #110303;
+  opacity: 0.85;
+  bottom: 0;
+  cursor: pointer;
+}
+.header__list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 160px;
+}
+.header__item {
+}
+.header__link {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 38px;
+  color: #dbdbdb;
+  text-shadow: 0 0 10px #c1c1c1, 0 0 20px #130606, 0 0 30px #110303;
+  opacity: 0.85;
+  bottom: 0;
+  position: relative;
+}
+
+.header__link:hover {
+  text-shadow: 0 0 10px rgb(135, 135, 135), 0 0 20px rgb(183, 183, 183);
+  transform: scale(1.05);
+}
+
+.header__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: rgb(101, 101, 101);
+  transition: width 0.3s ease;
+}
+
+.header__link:hover::after {
+  width: 100%;
+}
+
+.header__contact__list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.header__contact__item {
+
+}
+.header__contact__link {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 38px;
+  color: #000000;
+  text-shadow: 0 0 10px #5f1111, 0 0 20px #130606, 0 0 30px #110303;
+  opacity: 0.85;
+  bottom: 0;
+}
+
+.header__link,
+.header__contact__link {
+  background: linear-gradient(90deg, #ffffff, #b6b6b6, #a2a2a2);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 4s linear infinite;
+  /* Усиленный постоянный glow */
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.6),
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 20px rgb(255, 0, 0);
+  /* transition: all 0.3s ease;
+  text-shadow: 0 0 10px #5f1111, 0 0 20px #130606, 0 0 30px #110303; */
+  transition: all 0.3s ease;
+  
+}
+
+.header__link:hover,
+.header__contact__link:hover {
+  animation: redBlackGlow 1s infinite alternate;
+  background: none;
+  -webkit-text-fill-color: #ff0000;
+}
